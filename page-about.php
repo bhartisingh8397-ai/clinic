@@ -6,13 +6,15 @@ get_header(); ?>
 
 <main>
     <section class="about-hero"
-        style="background: linear-gradient(135deg, #1a3313 0%, #2d4a22 50%, #3d6b2e 100%); padding: 150px 0; color: var(--white); text-align: center;">
-        <div class="container" data-aos="fade-up">
-            <span class="badge" style="background: var(--accent); color: var(--primary); font-weight: 700;">LEGACY OF
+        style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-hero-neutral.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-aos="fade-up">
+            <span class="badge">LEGACY OF
                 EXCELLENCE</span>
             <h1 class="hero-title" style="color: var(--white);">About Dr. <span class="accent-text">Praveen Lakra</span>
             </h1>
-            <p style="font-size: 1.3rem; opacity: 0.9;">15+ Years of Distinguished Practice in Medical & Aesthetic
+            <p style="font-size: 1.3rem; opacity: 0.95; color: var(--white);">15+ Years of Distinguished Practice in
+                Medical & Aesthetic
                 Dermatology</p>
         </div>
     </section>

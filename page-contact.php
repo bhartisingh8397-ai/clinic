@@ -6,12 +6,16 @@ get_header(); ?>
 
 <main>
     <section class="contact-hero"
-        style="background: linear-gradient(135deg, #1a3313 0%, #2d4a22 50%, #3d6b2e 100%); text-align: center; color: var(--white); padding: 120px 0;">
-        <div class="container" data-aos>
-            <span class="badge" style="background: rgba(255,255,255,0.1); color: var(--white);">Contact Us</span>
+        style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/contact-hero.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-aos="fade-up">
+            <span class="badge"
+                style="background: var(--accent); color: var(--primary); font-weight: 700; border: none;">CONTACT
+                US</span>
             <h1 class="hero-title" style="color: var(--white);">Start Your <span
-                    class="accent-text">Transformation</span>
-            </h1>
+                    class="accent-text">Transformation</span></h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Book your private consultation
+                for a seamless and luxury skincare experience.</p>
         </div>
     </section>
 
@@ -70,8 +74,7 @@ get_header(); ?>
                                 style="width: 100%; padding: 15px; border: 1px solid #eee; background: #fafafa; border-radius: 4px; resize: none;"></textarea>
                         </div>
                         <div class="form-row" style="margin-top: 30px;">
-                            <button type="submit" class="btn"
-                                style="width: 100%; padding: 20px; font-weight: 700; letter-spacing: 2px;">CONFIRM
+                            <button type="submit" class="btn" style="width: 100%;">CONFIRM
                                 REQUEST</button>
                         </div>
                     </form>

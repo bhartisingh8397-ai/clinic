@@ -38,6 +38,7 @@
                 {
                     echo '<ul>';
                     echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
+                    echo '<li><a href="' . esc_url(home_url('/services/')) . '">Services</a></li>';
                     echo '<li><a href="' . esc_url(home_url('/about/')) . '">About Us</a></li>';
                     echo '<li><a href="' . esc_url(home_url('/blog/')) . '">Blog</a></li>';
                     echo '<li><a href="' . esc_url(home_url('/contact/')) . '">Contact</a></li>';

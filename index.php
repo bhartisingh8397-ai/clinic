@@ -2,22 +2,18 @@
 
 <main>
     <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(135deg, #1a3313 0%, #bdccb7ff 50%, #92b486ff 100%);">
+    <section class="hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.jpg');">
+        <div class="hero-overlay"></div>
         <div class="container hero-content" data-aos="fade-up">
-            <span class="badge" style="background: var(--accent); color: var(--primary); font-weight: 700;">PREMIUM
-                DERMATOLOGY</span>
-            <h1 class="hero-title">Artistry in <span class="accent-text" style="font-style: italic;">Dermatology</span>
-            </h1>
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 30px 0; opacity: 0.9;">
-                <center>Dr. Praveen Lakra offers a
-                    bespoke approach to skin health, combining cutting-edge medical science with a refined aesthetic
-                    eye.</center>
+            <span class="badge" style="background: var(--accent); color: var(--primary); font-weight: 700; border: none;">PREMIUM DERMATOLOGY</span>
+            <h1 class="hero-title">Renowned Dermatology Clinic<br><span class="accent-text" style="font-style: italic; color: var(--accent);">in Sonipat</span></h1>
+            <p>
+                Dr. Praveen Lakra offers a bespoke approach to skin health, combining cutting-edge medical science with a refined aesthetic eye.
             </p>
             <div class="hero-btns">
                 <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn">Schedule Consultation</a>
                 <a href="<?php echo esc_url(home_url('/about/')); ?>" class="btn"
-                    style="background: transparent; border: 1px solid var(--white); color: var(--white); margin-left: 20px;">Experience
-                    Excellence</a>
+                    style="background: transparent; border: 1px solid var(--white); color: var(--white); margin-left: 20px; box-shadow: none;">Experience Excellence</a>
             </div>
         </div>
     </section>

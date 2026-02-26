@@ -153,7 +153,7 @@ section {
 }
 
 .btn:hover {
-    background: var(--dark-green);
+    background: var(--primary);
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(45, 74, 34, 0.3);
 }
@@ -193,61 +193,108 @@ section {
 
 /* Front Page Premium Hero */
 .hero {
-    background: linear-gradient(135deg, #1a3313 0%, #2d4a22 50%, #3d6b2e 100%);
     background-size: cover;
-    min-height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     text-align: center;
     color: var(--white);
     position: relative;
+    padding: 80px 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(30, 30, 30, 0.7) 0%, rgba(10, 10, 10, 0.4) 100%), rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .hero-content {
     width: 100%;
     z-index: 2;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
     color: var(--white);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     line-height: 1.1;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    font-weight: 800;
 }
 
 .hero p {
-    font-size: 1.4rem;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 800px;
-    margin: 0 auto 45px;
-
-    font-weight: 300;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 850px;
+    margin: 0 auto 50px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Blog Hero Section */
-.blog-hero {
-    background: linear-gradient(135deg, #1a3313 0%, #2d4a22 50%, #3d6b2e 100%);
-    background-size: cover;
-    padding: 120px 0;
+@media (max-width: 720px) {
+    .hero {
+        min-height: 50vh;
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Sub-page Hero Sections (About, Services, Blog, Contact) */
+.about-hero,
+.services-hero,
+.blog-hero,
+.contact-hero {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 80px 0;
     text-align: center;
     color: var(--white);
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.blog-hero h1 {
+.blog-hero h1,
+.about-hero h1,
+.services-hero h1,
+.contact-hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: var(--white);
     font-weight: 800;
     letter-spacing: -1px;
 }
 
-.blog-hero p {
+.blog-hero p,
+.about-hero p,
+.services-hero p,
+.contact-hero p {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
+
 
 /* Premium Blog Post Cards */
 .premium-post-card {
@@ -955,7 +1002,7 @@ footer {
 
     /* Hero Section */
     .hero {
-        min-height: 60vh;
+        min-height: 50vh;
     }
 
     .hero-title {
@@ -1271,7 +1318,7 @@ footer {
 }
 
 .btn:hover {
-    background: var(--dark-green);
+    background: var(--primary);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(45, 74, 34, 0.3);
 }
@@ -1411,7 +1458,7 @@ html {
 
 /* About Us Page Premium Styles */
 .about-hero {
-    background: linear-gradient(135deg, #1a3313 0%, #2d4a22 50%, #3d6b2e 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #3e3e3e 100%);
     background-size: cover;
     padding: 120px 0;
     text-align: center;
@@ -1601,7 +1648,7 @@ html {
 .contact-form-premium .btn {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #2980b9, #3498db);
+    background: linear-gradient(135deg, var(--accent), var(--primary));
     color: var(--white);
     border: none;
     border-radius: 10px;
@@ -1615,9 +1662,9 @@ html {
 
 .contact-form-premium button[type="submit"]:hover,
 .contact-form-premium .btn:hover {
-    background: linear-gradient(135deg, #2471a3, #2980b9);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(41, 128, 185, 0.3);
+    box-shadow: 0 8px 25px rgba(45, 74, 34, 0.3);
 }
 
 /* ==========================================
@@ -1655,7 +1702,7 @@ footer {
     bottom: 0;
     width: 40px;
     height: 3px;
-    background: #3498db;
+    background: var(--accent);
     border-radius: 2px;
 }
 
@@ -1674,7 +1721,7 @@ footer {
 }
 
 .footer-col p i {
-    color: #3498db;
+    color: var(--accent);
     margin-right: 10px;
     width: 18px;
 }
@@ -1704,11 +1751,11 @@ footer {
     left: -20px;
     opacity: 0;
     transition: all 0.3s ease;
-    color: #3498db;
+    color: var(--accent);
 }
 
 .footer-col ul li a:hover {
-    color: #3498db;
+    color: var(--accent);
     padding-left: 20px;
 }
 
@@ -1728,21 +1775,21 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 8px 18px;
-    background: rgba(52, 152, 219, 0.15);
-    color: #3498db;
+    background: rgba(124, 179, 66, 0.15);
+    color: var(--accent);
     border-radius: 8px;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid rgba(52, 152, 219, 0.2);
+    border: 1px solid rgba(124, 179, 66, 0.2);
 }
 
 .social-icon:hover {
-    background: #3498db;
+    background: var(--accent);
     color: var(--white);
     transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 5px 20px rgba(124, 179, 66, 0.3);
 }
 
 .footer-bottom {
@@ -1755,4 +1802,213 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+/* ==========================================
+   SERVICES PAGE STYLES
+   ========================================== */
+
+/* Services Page Grid */
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/* Service Card */
+.service-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 45px 35px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(45, 74, 34, 0.15);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(124, 179, 66, 0.12), rgba(45, 74, 34, 0.08));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .service-card-icon {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    color: var(--white);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.service-card>p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Service Features List */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    flex: 1;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.service-features li i {
+    color: var(--accent);
+    font-size: 0.75rem;
+}
+
+/* Service Link */
+.service-link {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease, color 0.3s ease;
+    margin-top: auto;
+}
+
+.service-link:hover {
+    gap: 14px;
+    color: var(--primary);
+}
+
+/* Why Choose Us Grid */
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 35px;
+}
+
+.why-choose-card {
+    text-align: center;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 50px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s ease;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(45, 74, 34, 0.12);
+}
+
+.why-choose-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(124, 179, 66, 0.15), rgba(45, 74, 34, 0.08));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 0 auto 25px;
+    transition: all 0.4s ease;
+}
+
+.why-choose-card:hover .why-choose-icon {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.why-choose-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.why-choose-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   SERVICES PAGE RESPONSIVE
+   ========================================== */
+@media (max-width: 720px) {
+
+    .services-page-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 35px 25px;
+    }
+
+    .why-choose-card {
+        padding: 35px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
 }

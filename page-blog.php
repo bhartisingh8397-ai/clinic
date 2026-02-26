@@ -5,10 +5,16 @@
 
 get_header(); ?>
 
-<section class="blog-hero">
-    <div class="container">
-       <center> <h1>Health & Wellness Blog</h1>
-        <p>Expert advice and insights for your skin and hair care</p></center> 
+<section class="blog-hero"
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content" data-aos="fade-up">
+        <span class="badge"
+            style="background: var(--accent); color: var(--primary); font-weight: 700; border: none;">LATEST
+            INSIGHTS</span>
+        <h1 class="hero-title" style="color: var(--white);">Health & <span class="accent-text">Wellness Blog</span></h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Expert advice and clinical
+            insights for your skin and hair care journey.</p>
     </div>
 </section>
 
