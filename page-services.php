@@ -7,15 +7,16 @@ get_header(); ?>
 <main>
     <!-- Services Hero -->
     <section class="services-hero"
-        style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/services-hero.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/services-hero.png');">
         <div class="hero-overlay"></div>
         <div class="container hero-content" data-aos="fade-up">
-            <span class="badge">WHAT WE
-                OFFER</span>
-            <h1 class="hero-title" style="color: var(--white);">Our <span class="accent-text">Services</span></h1>
-            <p style="font-size: 1.3rem; opacity: 0.95; max-width: 750px; margin: 0 auto; color: var(--white);">
-                Comprehensive dermatological
-                solutions combining advanced medical science with aesthetic excellence.</p>
+            <center>
+            <span class="badge">WHAT WE OFFER</span>
+            <h1 class="hero-title">Our <span class="accent-text">Services</span></h1>
+            <p class="hero-subtitle">
+                Comprehensive dermatological solutions combining advanced medical science with aesthetic excellence.
+            </center>
+            </p>
         </div>
     </section>
 

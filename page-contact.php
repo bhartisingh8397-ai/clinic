@@ -10,8 +10,8 @@ get_header(); ?>
         <div class="hero-overlay"></div>
         <div class="container hero-content" data-aos="fade-up">
             <span class="badge"
-                style="background: var(--accent); color: var(--primary); font-weight: 700; border: none;">CONTACT
-                US</span>
+                style="background: var(--accent); color: var(--primary); font-weight: 700; border: none;"><center></center>CONTACT
+                US</center></span>
             <h1 class="hero-title" style="color: var(--white);">Start Your <span
                     class="accent-text">Transformation</span></h1>
             <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Book your private consultation

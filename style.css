@@ -139,7 +139,8 @@ section {
 .btn {
     display: inline-block;
     padding: 16px 40px;
-    background: var(--accent);
+    background: #28a745;
+    /* Unified Premium Green */
     color: var(--white);
     border-radius: 4px;
     text-transform: uppercase;
@@ -147,15 +148,27 @@ section {
     font-size: 0.85rem;
     letter-spacing: 2px;
     transition: var(--transition);
-    box-shadow: 0 10px 20px rgba(124, 179, 66, 0.3);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.2);
     border: none;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--primary);
+    background: #218838;
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(45, 74, 34, 0.3);
+    box-shadow: 0 15px 30px rgba(33, 136, 56, 0.3);
+}
+
+/* Update button and interactive icons to green */
+.btn i,
+button i[class*="fa-"],
+.social-icon i[class*="fa-"],
+.read-more-link i,
+.service-link i,
+.contact-item-v2 .icon i,
+.service-card-icon i,
+.why-choose-icon i {
+    color: #28a745 !important;
 }
 
 .badge {
@@ -589,22 +602,6 @@ footer {
     margin-top: 25px;
     display: flex;
     gap: 15px;
-}
-
-.social-icon {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 8px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-}
-
-.social-icon:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: var(--white) !important;
 }
 
 .footer-col h3 {
@@ -1631,7 +1628,7 @@ html {
     outline: none;
     border-color: var(--accent);
     background: var(--white);
-    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.15);
 }
 
 .contact-form-premium input::placeholder,
@@ -1648,7 +1645,7 @@ html {
 .contact-form-premium .btn {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, var(--accent), var(--primary));
+    background: linear-gradient(135deg, #28a745, #218838);
     color: var(--white);
     border: none;
     border-radius: 10px;
@@ -1662,9 +1659,9 @@ html {
 
 .contact-form-premium button[type="submit"]:hover,
 .contact-form-premium .btn:hover {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: linear-gradient(135deg, #218838, #28a745);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(45, 74, 34, 0.3);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
 }
 
 /* ==========================================
@@ -1774,22 +1771,37 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 18px;
-    background: rgba(124, 179, 66, 0.15);
-    color: var(--accent);
+    padding: 10px 22px;
+    background: rgba(40, 167, 69, 0.1);
+    /* Subtle green bg */
+    color: #28a745 !important;
+    /* Force Premium Green */
     border-radius: 8px;
     text-decoration: none;
     font-size: 0.85rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(124, 179, 66, 0.2);
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-icon i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+    color: #28a745 !important;
 }
 
 .social-icon:hover {
-    background: var(--accent);
-    color: var(--white);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(124, 179, 66, 0.3);
+    background: #28a745;
+    color: var(--white) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+    border-color: #28a745;
+}
+
+.social-icon:hover i {
+    color: var(--white) !important;
 }
 
 .footer-bottom {
@@ -1807,6 +1819,36 @@ footer {
 /* ==========================================
    SERVICES PAGE STYLES
    ========================================== */
+
+/* Services Hero Refinement */
+.services-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.services-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.services-hero .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    z-index: 2;
+    line-height: 1.6;
+}
 
 /* Services Page Grid */
 .services-page-grid {
@@ -1826,6 +1868,7 @@ footer {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .service-card::before {
